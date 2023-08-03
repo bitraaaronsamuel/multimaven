@@ -45,18 +45,7 @@ pipeline
                cicd.ctesting("dpwsl")
            }
           }
-      }
-      stage('continous deleviry')
-      {
-          steps
-          {
-              script
-              {
-                 deploy adapters: [tomcat9(credentialsId: 'e1129637-04ae-4ee7-88b5-269294d32797', path: '', url: 'http://172.31.82.2:8080')], contextPath: 'prodapp', war: '**/*.war' 
-              }
           }
-      }
-      
     }
     
 }
